@@ -38,7 +38,7 @@ class calculadoraTesting(unittest.TestCase):
         firstNumber = driver.find_element_by_id("number1Field")
         print("El maximo de caracteres que soporta es "+ firstNumber.get_attribute('maxlength'))
 
-    def test_operAritm_hacepta_una_Letra_distinta_de_e(self): #2
+    def test_operAritm_acepta_una_Letra_distinta_de_e(self): #2
         print("Caso de Prueba nro 2")
         driver = self.driver
         driver.get(self.page)
@@ -48,7 +48,7 @@ class calculadoraTesting(unittest.TestCase):
         u.wait(self,1)#cuando se quiera se puede dar menos tiempo
         assert driver.find_element_by_id("errorMsgField").text == "Number 1 is not a number"
     
-    def test_operAritm_hacepta_una_Letra_distintas_de_e_v2(self): #3
+    def test_operAritm_acepta_una_Letra_distintas_de_e_v2(self): #3
         print("Caso de Prueba nro 3")
         driver = self.driver
         driver.get(self.page)
@@ -64,7 +64,7 @@ class calculadoraTesting(unittest.TestCase):
         u.elegir_operacion_Y_click_Boton_Calcular(self,driver,2)
         assert driver.find_element_by_id("errorMsgField").text == "Number 1 is not a number"
     
-    def test_operAritm_hacepta_una_Letra_distintas_de_e_v3(self):
+    def test_operAritm_acepta_una_Letra_distintas_de_e_v3(self):
         print("Caso de Prueba nro 4") #4
         driver = self.driver
         driver.get(self.page)
